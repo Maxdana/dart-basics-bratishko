@@ -4,6 +4,8 @@ void main() {
 
   demonstrateNumbers();
   demonstrateStrings();
+  demonstrateBooleans();
+  demonstrateCollections();
 }
 
 void demonstrateNumbers() {
@@ -52,4 +54,59 @@ void demonstrateStrings() {
 ''';
 
   print('Багаторядковий текст:\n$multiLine');
+}
+
+void demonstrateBooleans() {
+  print('\n--- Логічні значення ---');
+
+  int a = 22;
+  int b = 4;
+
+  bool isGreater = a > b;
+  bool isEqual = a == b;
+
+  print('22 більше за 4: $isGreater');
+  print('22 дорівнює 4: $isEqual');
+  print('22 не дорівнює 4: ${a != b}');
+  print('Обидва числа додатні: ${a > 0 && b > 0}');
+  print('Хоча б одне число більше за 20: ${a > 20 || b > 20}');
+  print('Заперечення рівності: ${!isEqual}');
+
+  if (a > b) {
+    print('Перше число більше за друге');
+  } else {
+    print('Друге число більше або дорівнює першому');
+  }
+
+  String result = a > b ? 'Так' : 'Ні';
+  print('Чи перше число більше: $result');
+}
+
+void demonstrateCollections() {
+  print('\n--- Колекції ---');
+
+  List<int> numbers = [22, 4, 10];
+  print('Список чисел: $numbers');
+
+  numbers.add(8);
+  print('Список після додавання: $numbers');
+  print('Перший елемент: ${numbers.first}');
+  print('Кількість елементів: ${numbers.length}');
+
+  Set<int> uniqueNumbers = {22, 4, 22, 10};
+  print('Множина без повторень: $uniqueNumbers');
+
+  uniqueNumbers.add(8);
+  print('Множина після додавання: $uniqueNumbers');
+
+  Map<String, int> values = {
+    'Перше число': 22,
+    'Друге число': 4,
+  };
+
+  print('Словник: $values');
+  print('Перше число зі словника: ${values['Перше число']}');
+
+  values['Третє число'] = 10;
+  print('Словник після додавання: $values');
 }
