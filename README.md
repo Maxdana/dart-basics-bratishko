@@ -59,6 +59,77 @@ dart test
 
 У проєкті реалізовано класи Student, Course, Professor та University. Демонстрація їх використання наведена у файлі bin/task3_classes.dart.
 
+## UML-діаграма університетської системи
+
+classDiagram
+    class Person {
+        <<abstract>>
+        +String id
+        +String firstName
+        +String lastName
+        +DateTime birthDate
+        +String fullName
+        +int age
+        +String role
+    }
+
+    class Professor {
+        +String department
+        +List~String~ taughtCourses
+        +double salary
+        +addCourse(String courseId)
+    }
+
+    class Student {
+        +String id
+        +String firstName
+        +String lastName
+        +DateTime birthDate
+        +List~String~ enrolledCourses
+        +Map~String,double~ grades
+        +String fullName
+        +int age
+        +double gpa
+        +enrollInCourse(String courseId)
+        +addGrade(String courseId, double grade)
+        +getPassedCourses()
+        +toJson()
+        +fromJson()
+    }
+
+    class Course {
+        +String id
+        +String name
+        +String description
+        +int credits
+        +String instructor
+        +List~String~ prerequisites
+        +hasPrerequisites()
+        +canStudentEnroll(Student student)
+    }
+
+    class University {
+        +String name
+        +List~Student~ students
+        +List~Professor~ professors
+        +List~Course~ courses
+        +addStudent(Student student)
+        +removeStudent(String studentId)
+        +findStudentById(String id)
+        +getStudentsByCourse(String courseId)
+        +getAvailableCoursesForStudent(String studentId)
+        +generateStatistics()
+    }
+
+    Person <|-- Professor
+    University o-- Student
+    University o-- Professor
+    University o-- Course
+    Course ..> Student : перевіряє умови вступу
+
+
+
+
 ## Скриншоти виконання
 
 
