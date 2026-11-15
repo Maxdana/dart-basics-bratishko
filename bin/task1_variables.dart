@@ -46,8 +46,8 @@ void demonstrateStrings() {
   print('Великі літери: ${text.toUpperCase()}');
   print('Малі літери: ${text.toLowerCase()}');
   print('Чи містить слово Україна: ${text.contains(word)}');
+  print('Об\'єднання рядків: $text Ми переможемо!');
 
-  print('Об\'єднання рядків: ' + text + ' Ми переможемо!');
 
   String multiLine = '''
 Все буде Україна!
@@ -94,7 +94,7 @@ void demonstrateCollections() {
   print('Перший елемент: ${numbers.first}');
   print('Кількість елементів: ${numbers.length}');
 
-  Set<int> uniqueNumbers = {22, 4, 22, 10};
+  Set<int> uniqueNumbers = {22, 4, 10};
   print('Множина без повторень: $uniqueNumbers');
 
   uniqueNumbers.add(8);
