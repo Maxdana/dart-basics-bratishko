@@ -1,0 +1,34 @@
+{
+  "studentsCount": 3,
+  "sequentialTime": 937,
+  "parallelTime": 314,
+  "results": [
+    {
+      "name": "Дональд Трамп",
+      "age": 80,
+      "gpa": 67.5,
+      "courses": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "name": "Владімір Путін",
+      "age": 74,
+      "gpa": 69.5,
+      "courses": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "name": "Сі Цзіньпін",
+      "age": 73,
+      "gpa": 82.5,
+      "courses": [
+        "C1",
+        "C2"
+      ]
+    }
+  ]
+}
