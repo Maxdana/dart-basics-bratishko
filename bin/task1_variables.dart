@@ -6,6 +6,7 @@ void main() {
   demonstrateStrings();
   demonstrateBooleans();
   demonstrateCollections();
+  demonstrateNullSafety();
 }
 
 void demonstrateNumbers() {
@@ -109,4 +110,26 @@ void demonstrateCollections() {
 
   values['Третє число'] = 10;
   print('Словник після додавання: $values');
+}
+
+
+void demonstrateNullSafety() {
+  print('\n--- Null Safety ---');
+
+  String? city;
+  print('Початкове значення: $city');
+
+  print('Місто: ${city ?? 'Місто невідоме'}');
+
+  city ??= 'Київ';
+  print('Після присвоєння: $city');
+
+  late String description;
+  description = 'Київ — столиця України';
+  print('Опис: $description');
+
+  showCity(name: 'Київ');
+}
+void showCity({required String name}) {
+  print('Обов\'язковий параметр: $name');
 }
