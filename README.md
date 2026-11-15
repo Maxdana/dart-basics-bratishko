@@ -60,7 +60,7 @@ dart test
 У проєкті реалізовано класи Student, Course, Professor та University. Демонстрація їх використання наведена у файлі bin/task3_classes.dart.
 
 ## UML-діаграма університетської системи
-
+```mermaid
 classDiagram
     class Person {
         <<abstract>>
@@ -126,7 +126,7 @@ classDiagram
     University o-- Professor
     University o-- Course
     Course ..> Student : перевіряє умови вступу
-
+```
 
 
 
