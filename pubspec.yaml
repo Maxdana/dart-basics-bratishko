@@ -1,7 +1,7 @@
 name: dart_basics_bratishko
 description: Практична робота № 4. Основи мови Dart.
 version: 1.0.0
-# repository: https://github.com/Maxdana/dart-basics-bratishko
+repository: https://github.com/Maxdana/dart-basics-bratishko
 
 environment:
   sdk: ^3.13.7

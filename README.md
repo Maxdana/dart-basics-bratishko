@@ -1,2 +1,60 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+
+# Практична робота № 4. Основи мови Dart
+
+Дисципліна: Програмування для мобільних платформ.
+
+## Опис проєкту
+
+Проєкт створено для вивчення основ мови програмування Dart.
+
+У практичній роботі виконуються п'ять завдань:
+
+1. Налаштування Dart-проєкту.
+2. Робота зі змінними, типами даних і функціями.
+3. Створення класів та системи управління університетом.
+4. Робота з колекціями та обробка даних.
+5. Асинхронне програмування та робота з файлами.
+
+## Встановлення Dart SDK
+
+Для запуску програм потрібен Dart SDK версії 3.0.0 або новішої.
+
+Завантажити Dart SDK можна на офіційному сайті:
+https://dart.dev/get-dart
+
+Перевірка встановленої версії:
+
+```powershell
+dart --version
+```
+
+## Запуск програм
+
+Відкрити термінал у папці проєкту та виконати:
+
+```powershell
+dart pub get
+```
+
+Команди для запуску завдань:
+
+```powershell
+dart run bin/task1_variables.dart
+dart run bin/task2_functions.dart
+dart run bin/task3_classes.dart
+dart run bin/task4_collections.dart
+dart run bin/task5_async.dart
+```
+
+Програми будуть реалізовані під час виконання практичної роботи.
+
+## Перевірка коду
+
+```powershell
+dart analyze
+dart test
+```
+
+## Використання класів
+
+Приклади використання класів Student, Course та University будуть додані після їх реалізації.
