@@ -4,6 +4,7 @@ void main() {
 
   testBasicFunctions();
   testAdvancedFunctions();
+  testFunctionalProgramming();
 }
 
 int calculateSum(int a, int b) {
@@ -70,4 +71,27 @@ void testAdvancedFunctions() {
 
   print('Число Фібоначчі для 5: ${fibonacci(5)}');
   print('Факторіал числа 4: ${factorial(4)}');
+}
+
+void testFunctionalProgramming() {
+  print('\n--- Функціональне програмування ---');
+
+  List<int> numbers = [35, 3];
+
+  var doubled = numbers.map((number) => number * 2).toList();
+  print('Числа, помножені на 2: $doubled');
+
+  var filtered = numbers.where((number) => number > 3).toList();
+  print('Числа більше 3: $filtered');
+
+  int sum = numbers.fold(0, (total, number) => total + number);
+  print('Сума через fold: $sum');
+
+  int multiplier = 3;
+
+  int multiply(int number) {
+    return number * multiplier;
+  }
+
+  print('Замикання: ${multiply(35)}');
 }
